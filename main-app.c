@@ -215,30 +215,30 @@ int main(void){
   }
 
   curl_easy_cleanup(curl);
-char* buffer = (char*)malloc(0x100);
-*buffer = 'a';
-*(buffer + 1) = 0;
-int result;
+  char* buffer = (char*)malloc(0x100);
+  *buffer = 'a';
+  *(buffer + 1) = 0;
+  int result;
 
-download_video();
-close_connection();
-calculate_md5();
-rename_video();
-release_video_buffer();
-release_audio_buffer();
-copy_local_audio_file(buffer);
-init_new_song();
-start_init_routine();
-report_signals();
-critical_control_monitor();
-update_fw_version();
-read_config(buffer);
-restart_services(buffer);
-interval_check();
-fw_validation_process(buffer);
-debug_event_report();
-establish_client_connection();
-connect_new_server();
+  download_video();
+  close_connection();
+  calculate_md5();
+  rename_video();
+  release_video_buffer();
+  release_audio_buffer();
+  copy_local_audio_file(buffer);
+  init_new_song();
+  start_init_routine();
+  report_signals();
+  critical_control_monitor();
+  update_fw_version();
+  read_config(buffer);
+  restart_services(buffer);
+  interval_check();
+  fw_validation_process(buffer);
+  debug_event_report();
+  establish_client_connection();
+  connect_new_server();
 
   return 0;
 }
